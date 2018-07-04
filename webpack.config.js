@@ -150,7 +150,7 @@ module.exports = env => {
                             loader: "nativescript-dev-webpack/bundle-config-loader",
                             options: {
                                 angular: true,
-                                loadCss: !snapshot, // load the application css if in debug mode
+                                loadCss: false, // we'll use a custom css loading logic
                             }
                         },
                     ].filter(loader => !!loader)
