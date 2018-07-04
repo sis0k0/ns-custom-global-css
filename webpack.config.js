@@ -250,7 +250,9 @@ module.exports = env => {
         config.plugins.push(new nsWebpack.NativeScriptSnapshotPlugin({
             chunk: "vendor",
             angular: true,
+            includeApplicationCss: false,
             requireModules: [
+                resolve(appFullPath, "loadCss"),
                 "reflect-metadata",
                 "@angular/platform-browser",
                 "@angular/core",
