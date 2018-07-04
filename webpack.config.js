@@ -160,7 +160,7 @@ module.exports = env => {
 
                 // tns-core-modules reads the app.css and its imports using css-loader
                 {
-                    test: /[\/|\\]app\.css$/,
+                    test: /[\/|\\]app1\.css$/,
                     use: {
                         loader: "css-loader",
                         options: { minimize: false, url: false },
@@ -175,7 +175,7 @@ module.exports = env => {
                 },
 
                 // Angular components reference css files and their imports using raw-loader
-                { test: /\.css$/, exclude: /[\/|\\]app\.css$/, use: "raw-loader" },
+                { test: /\.css$/, exclude: /[\/|\\]app1\.css$/, use: "raw-loader" },
                 { test: /\.scss$/, exclude: /[\/|\\]app\.scss$/, use: ["raw-loader", "resolve-url-loader", "sass-loader"] },
 
                 // Compile TypeScript files with ahead-of-time compiler.
